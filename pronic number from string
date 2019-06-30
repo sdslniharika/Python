@@ -1,0 +1,27 @@
+
+import math
+def pronic(l):
+    l2=[]
+    for i in l:
+        j=0
+        while (j<=int(math.sqrt(i))):
+            if j*(j+1)==i:
+                #l2.append(i)
+                print(i)
+                break
+            j=j+1
+    return l2
+def substr(str):
+    n=len(str)
+    l=[]
+    for i in range(n):
+        for j in range(i+1,n+1):
+            l.append(int(str[i:j]))
+            t=set(l)
+            #sorted(t)
+    return t
+list=substr(input())
+print(list)
+#list=[6,972,54,56,12]
+num=pronic(list)    
+#print(num)
